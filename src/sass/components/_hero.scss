@@ -8,43 +8,49 @@
     padding-left: 39px;
     padding-bottom: 129px;
 
-    h1 {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 1.2em;
-      color: #35363A;
-      margin-top: 23px;
-    }
-
-    .subtitle {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 22px;
-      line-height: 26px;
-      color: #35363A;
-      margin-top: 25px;
-    }
-
-    .lead {
-      font-family: 'Roboto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      color: #35363A;
-    }
-    
     .hero-text {
       text-align: left;
       position: relative;
       width: 50%;
+
+      h1 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 1.2em;
+        color: #35363A;
+        margin-top: 23px;
+      }
+
+      .subtitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.18em;
+        color: #35363A;
+        margin-top: 25px;
+      }
+
+      .lead {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #35363A;
+      }
+
+      .new-line {
+        display: block;
+      }
+    
     }
 
     .button-container {
       display: flex;
+      flex-wrap: wrap;
       gap: 23px;
       margin-top: 27px;
     }
@@ -58,6 +64,7 @@
       line-height: 21px;
       text-align: center;
       transition: .3s background ease;
+      white-space: nowrap;
 
       &:focus-visible {
         box-shadow: 0 0 0 4px white, 0 0 0 8px black;
@@ -96,5 +103,41 @@
     padding-bottom: 61px;
     object-fit: contain;
     object-position: right;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-container{
+    .component.hero {
+      padding: 48px 24px;
+
+      .hero-text {
+        width: 100%;
+        z-index: 1;
+        
+        .new-line {
+          display: inline;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+    
+        .subtitle {
+          font-size: 20px;
+        }
+    
+        .lead {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .hero-image {
+      width: 100%;
+      left: 0;
+      object-position: center;
+      opacity: .2;
+    }
   }
 }
