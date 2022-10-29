@@ -40,6 +40,45 @@
       position: relative;
       width: 50%;
     }
+
+    .button-container {
+      display: flex;
+      gap: 23px;
+      margin-top: 27px;
+    }
+
+    .btn {
+      border-radius: 5px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      transition: .3s background ease;
+    }
+    
+    .btn-primary {
+      background: #FFFFFF;
+      border: 1px solid #1155CB;
+      color: #1155CB;
+      padding: 11px 29px;
+
+      &:hover {
+        background: #1155CB22;
+      }
+    }
+
+    .btn-secondary {
+      background: #1155CB;
+      border: 1px solid #1155CB;
+      color: #FFFFFF;
+      padding: 11px 22px;
+
+      &:hover {
+        background: #1155CBDD;
+      }
+    }
   }
   .hero-image {
     height: 100%;
