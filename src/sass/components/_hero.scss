@@ -1,15 +1,51 @@
-.component.hero {
-  .hero-image {
-    width: 100%;
+.hero-container{
+  position: relative;
+
+  .component.hero {
+    position: relative;
+    padding-top:109px;
+    padding-left: 39px;
+
+    h1 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 1.2em;
+      color: #35363A;
+      margin-top: 23px;
+    }
+
+    .subtitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+      color: #35363A;
+      margin-top: 25px;
+    }
+
+    .lead {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #35363A;
+    }
+    
+    .hero-text {
+      text-align: left;
+      position: relative;
+      width: 50%;
+    }
   }
-
-  .hero-text {
-    text-align: left;
+  .hero-image {
+    height: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    top: 0;
+    bottom: 0;
+    right: 0;
   }
 }
-
