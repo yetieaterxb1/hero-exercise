@@ -1,10 +1,12 @@
 .hero-container{
   position: relative;
+  background: linear-gradient(260.87deg, #EAF3FA 3.75%, #EAF3FA 41.86%, rgba(234, 243, 250, 0) 80.29%, rgba(234, 243, 250, 0) 99.16%);
 
   .component.hero {
     position: relative;
     padding-top:109px;
     padding-left: 39px;
+    padding-bottom: 129px;
 
     h1 {
       font-family: 'Roboto';
@@ -90,5 +92,9 @@
     top: 0;
     bottom: 0;
     right: 0;
+    width: 54%;
+    padding-bottom: 61px;
+    object-fit: contain;
+    object-position: right;
   }
 }
