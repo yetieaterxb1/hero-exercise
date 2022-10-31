@@ -37,6 +37,9 @@
                 </ul>
                 <form class="newsletter-signup d-flex">
                   <input class="form-control me-2" type="email" name="email" placeholder="Email" aria-label="Search">
+                  <input type="hidden" name="utm_source" value="">
+                  <input type="hidden" name="utm_medium" value="">
+                  <input type="hidden" name="utm_campaign" value="">
                   <button class="btn btn-outline-success" type="submit">Subscribe</button>
                 </form>
               </div>
@@ -310,6 +313,37 @@
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <script>
+        var getParameters = function(){
+            var parameters = {};  
+            var windowLocation = window.location.toString();
+            var splitParams = windowLocation.split("?");
+          
+            if (splitParams.length > 1) {
+                var keyValues = splitParams[1].split("&");
+                for (i in keyValues) {
+                    var keyValue = keyValues[i].split("=");
+                    if (parameters[keyValue[0]] === undefined) {
+                        parameters[keyValue[0]] = decodeURIComponent(keyValue[1]);
+                    } 
+                }
+            }
+
+            return parameters;
+        }
+
+        var setHiddenFields = function(){
+            var urlParameters = getParameters();     
+            var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
+
+            for (var i = 0; i < hiddenFields.length; i++) {
+                var parameter = urlParameters[hiddenFields[i].name];
+                if (parameter) document.getElementsByName(hiddenFields[i].name)[0].value = parameter;
+            }
+        }
+      
+        setTimeout(function(){setHiddenFields();}, 2400);
+      </script>
 </body>
 
 </html>
